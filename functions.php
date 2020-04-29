@@ -1,0 +1,50 @@
+<?php 
+
+//adding the CSS and JS files
+
+function gt_setup(){
+    wp_enqueue_style("google-fonts", "//fonts.googleapis.com/css?family=Raleway:400,500i,700,900&display=swap");
+    wp_enqueue_style("fontawesome", "//use.fontawesome.com/releases/v5.13.0/css/all.css");
+    wp_enqueue_style("style", get_stylesheet_uri(), NULL, microtime());
+    wp_enqueue_script("main", get_theme_file_uri("/js/main.js"), NULL, microtime(), true);
+}
+
+add_action("wp_enqueue_scripts", "gt_Setup");
+
+// adding theme support
+
+function mb_init() {
+    add_theme_support("post-thumbnails");
+    add_theme_support("title-tag");
+    add_theme_support("html5",
+        array("comment-list", "comment-form", "search-form")
+    );
+    
+}
+
+
+add_action("after_setup_theme", "mb_init");
+
+// Features post types
+
+function mb_custom_post_type() {
+    register_post_type("Feature",
+        array(
+            "rewrite" => array("slug" => "Features"),
+            "labels" => array(
+                "name" => "Features",
+                "singular_name" => "Feature",
+                "add_new_item" => "Add New Feature",
+                "edit_item" => "Edit Feature"
+            ),
+            "menu-icon" => "dashicons-clipboard",
+            "public" => true,
+            "has_archive" => true,
+            "supports" => array(
+                "title", "thumbnail", "editor", "excerpt", "comments", "tags"
+            )
+        )
+     );
+}
+
+add_action("init", "mb_custom_post_type");
