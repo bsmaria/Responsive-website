@@ -488,6 +488,16 @@ section {
 	flex-wrap: wrap;
 }
 
+section a {
+	text-decoration:none;
+	color:var(--main-primary-color);
+	transition:var(--transition-ease);
+}
+
+section a:hover {
+	text-decoration:underline;
+}
+
 main {
 	position:relative;
 	width:100%;

@@ -5,7 +5,9 @@
     <section>
       <div id="pages">
         <div class="pages-text">
-          <span>OUR GOALS</span>
+          <a href="<?php echo site_url('/about'); ?>">
+            <span>OUR GOALS</span>
+          </a>
         </div>
         <ul>
           <li class="pages-inline">
@@ -49,9 +51,25 @@
         <div id="container">
 
             <div class="featured-text">
-              <span><a href="features.html">FEATURED WORKS</a></span>
+              <span><a href="<?php echo site_url('/features'); ?>">FEATURED WORKS</a></span>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
             </div>
+
+            <?php 
+
+              $args = array(
+                "post_type" => "post",
+                "posts_per_page" => 2,
+              );
+
+              $blogposts = new WP_Query($args);
+            
+              while ($blogposts->have_posts()) {
+                $blogposts->the_post();
+              }
+              
+            ?>
+
             <div class="galery-align">
                 <div class="sizezero">
                     <a href="features-post.html"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a1145580599725.5ce5ac218a422.jpg"></a>
@@ -85,7 +103,7 @@
     <section>
         <div id="services">
           <div class="services-text">
-            <span><a href="services.html">Our services</a></span>
+            <span><a href="<?php echo site_url('/services'); ?>">Our services</a></span>
           </div>
           <div class="flex-box">
             <div class="services-items">
