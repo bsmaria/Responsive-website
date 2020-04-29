@@ -45,53 +45,35 @@
       <div id="features">
         <div id="container">
             <div class="featured-text">
-              <span><a href="<?php echo site_url('/features'); ?>">FEATURED WORKS</a></span>
+              <span><a href="<?php echo site_url('/blog'); ?>">FEATURED WORKS</a></span>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
             </div>
+        
+            <div class="galery-align">
 
             <?php 
+                $args = array(
+                  "post_type" => "post",
+                  "posts_per_page" => 8,
+                );
 
-              $args = array(
-                "post_type" => "post",
-                "posts_per_page" => 8,
-              );
+                $blogposts = new WP_Query($args);
 
-              $blogposts = new WP_Query($args);
-            
-              while ($blogposts->have_posts()) {
-                $blogposts->the_post();
-              }
-              
-            ?>
-
-            <div class="galery-align">
+                while ($blogposts->have_posts()) {
+                  $blogposts->the_post();
+                }
+           ?>
                 <div class="sizezero">
-                    <a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>"></a>
+                    <a href="<?php the_permalink(); ?>">
+                    <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>">
+                    </a>
                 </div>
-                <div class="sizezero">
-                  <a href="<?php the_permalink(); ?>"> <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>"></a>
-                </div>
-                <div class="sizezero">
-                    <a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>"></a>
-                </div>
-                <div class="sizezero">
-                    <a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>"></a>
-                </div>
-                <div class="sizezero">
-                    <a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>"></a>
-                </div>
-                <div class="sizezero">
-                    <a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>"></a>
-                </div>
-                <div class="sizezero">
-                    <a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>"></a>
-                </div>
-                <div class="sizezero">
-                    <a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>"></a>
-                </div>
-            </div>
-
-            <?php wp_reset_query(); ?>
+               
+                <?php
+                  wp_reset_query();             
+                ?>  
+                      
+            </div>         
         </div>
       </div>
     </section>
