@@ -19,9 +19,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               </div>
           </li>
-
           <li class="pages-inline">
-
                 <div class="page-item">
                     <div class="page-icon" id="icon2">
                       <img src="<?php echo get_template_directory_uri(); ?>/img/page-icon-03.png" alt="fully customizable icon." />
@@ -30,7 +28,6 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
           </li>
-
           <li class="pages-inline">
               <div class="page-item">
                 <div class="page-icon" id="icon3">
@@ -40,16 +37,13 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               </div>
           </li>
-
         </ul>
-
       </div>
     </section>
 
     <section>
       <div id="features">
         <div id="container">
-
             <div class="featured-text">
               <span><a href="<?php echo site_url('/features'); ?>">FEATURED WORKS</a></span>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
@@ -59,7 +53,7 @@
 
               $args = array(
                 "post_type" => "post",
-                "posts_per_page" => 2,
+                "posts_per_page" => 8,
               );
 
               $blogposts = new WP_Query($args);
@@ -72,30 +66,32 @@
 
             <div class="galery-align">
                 <div class="sizezero">
-                    <a href="features-post.html"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a1145580599725.5ce5ac218a422.jpg"></a>
+                    <a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>"></a>
                 </div>
                 <div class="sizezero">
-                  <a href="#"> <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/f3e39a48469833.58992c0b7f75a.png"></a>
+                  <a href="<?php the_permalink(); ?>"> <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>"></a>
                 </div>
                 <div class="sizezero">
-                    <a href="#"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/77887c72855981.5bf5a49100715.jpg"></a>
+                    <a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>"></a>
                 </div>
                 <div class="sizezero">
-                    <a href="#"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/05d64e84803165.5d68348e3e82c.png"></a>
+                    <a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>"></a>
                 </div>
                 <div class="sizezero">
-                    <a href="#"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/469d6590296519.5e13e7f1cc328.jpg"></a>
+                    <a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>"></a>
                 </div>
                 <div class="sizezero">
-                    <a href="#"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/b5f71348474853.58993cf246ee2.jpg"></a>
+                    <a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>"></a>
                 </div>
                 <div class="sizezero">
-                    <a href="#"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/58a1fa49048915.58a9d59996c97.jpg"></a>
+                    <a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>"></a>
                 </div>
                 <div class="sizezero">
-                    <a href="#"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5b194b49048577.58a9d34287918.jpg"></a>
+                    <a href="<?php the_permalink(); ?>"><img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>"></a>
                 </div>
             </div>
+
+            <?php wp_reset_query(); ?>
         </div>
       </div>
     </section>
@@ -144,7 +140,5 @@
       </div>
     </div>
   </section>
-
-
 
 <?php get_footer(); ?>
