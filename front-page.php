@@ -54,21 +54,22 @@
             <?php 
                 $args = array(
                   "post_type" => "post",
-                  "posts_per_page" => 8,
+                  "posts_per_page" => 4
                 );
 
                 $blogposts = new WP_Query($args);
-
+            ?>
+            <?php
                 while ($blogposts->have_posts()) {
                   $blogposts->the_post();
-                }
+                
            ?>
                 <div class="sizezero">
                     <a href="<?php the_permalink(); ?>">
                     <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>">
                     </a>
                 </div>
-               
+              <?php } ?>
                 <?php
                   wp_reset_query();             
                 ?>  
