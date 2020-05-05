@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+</header>
+
 <main>
     <section class="section-header">
       <h2>Portfolio</h2>
@@ -9,7 +11,7 @@
 
     <div class="two-columns-section" id="features-columns">
       <div class="features-item">
-        <a href="features-post.html"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a1145580599725.5ce5ac218a422.jpg" atl=""></a>
+        <a href="<?php echo the_permalink(); ?>"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a1145580599725.5ce5ac218a422.jpg" atl=""></a>
         <h3><a href="features-post.html">Title del item</a></h3>
         <p>Post made by <a href="#">admin</a> on 23/05/2020 at 5:43pm. </p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>

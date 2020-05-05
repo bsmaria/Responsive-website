@@ -44,13 +44,4 @@
         </li>
 			</ul>
 		</nav>
-    <div id="searchbox">
-      <input type="text" placeholder="Search here." id="search-input">
-    </div>
-		<div class="h1-title">
-			<div class="title-text" id="home-title-text">
-				<span>Here you can type your company slogan</span>
-			</div>
-		</div>
-
-	</header>
+  

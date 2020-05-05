@@ -35,7 +35,7 @@ a {
 	text-decoration: none;
 }
 
-header {
+.header1 {
 	height:100vh;
 	display:flex;
 	align-items: center;
@@ -181,6 +181,15 @@ header {
 
 /* SINGLE POST PAGE*/
 
+#mainp {
+	position:relative;
+	width:100%;
+	height: auto;
+	z-index:4;
+	display: flex;
+	flex-direction: column;
+}
+
 .post-info {
 	box-sizing: border-box;
 	padding-top:-20%;
@@ -192,9 +201,30 @@ header {
 	height: auto;
 	align-content: center;
 	justify-content: center;
+	flex:3;
+}
+
+.post-info:before {
+	content:"";
+	display: block;
+	position: relative;
+	top:-2rem;
+	width:100%;
+	height:1px;
+	background-color: black;
+}
+.post-info:after {
+	content:"";
+	display: block;
+	position: relative;
+	bottom:-2rem;
+	width:100%;
+	height:1px;
+	background-color: black;
 }
 
 .main-post {
+	flex:2;
 	box-sizing: border-box;
 	padding:30px;
 	width:100%;
@@ -218,16 +248,47 @@ header {
 }
 .post-description p {
 	margin:5px;
-	padding:30px 50px 0px 50px;
+	padding:30px 30px 0px 30px;
 }
 
 #sidebar {
+	box-sizing: border-box;
+	width:30%;
+	margin:2rem 2rem;
 	background-color:#333;
-	flex:1;
-	padding:0px 16px;
+	padding:0px 2em;
 	color:white;
 	box-shadow:inset 27px 0 51px -18px rgba(0,0,0,0.75);
 }
+
+.other-posts {
+	margin-top:2em;
+	display:flex;
+	flex-direction:row;
+	width:100%;
+	justify-content: space-around;
+}
+
+.other-posts:before {
+	content:"";
+	display:block;
+	position:absolute;
+	bottom:8rem;
+	width:100%;
+	height:1px;
+	background-color: black;
+}
+
+.more-features {
+	box-sizing: border-box;
+	padding:2em;
+	width:20%;
+}
+
+.more-features a {
+	text-decoration:none;
+}
+
 
 
 /* SLIDEOUT MENU */
@@ -653,10 +714,10 @@ main {
  /* SERVICES */
 
 #services {
+	box-sizing: border-box;
 	height:auto;
 	background-color: white;
 	width: 100%;
-	padding:6em 0em;
 	display:flex;
 	flex-direction:row;
 	justify-content:space-around;
@@ -667,7 +728,7 @@ main {
 	width:100%;
 	display:flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 .services-text {
@@ -675,11 +736,13 @@ main {
 	font-size: 40px;
 	font-weight: 800;
 	color: #313332;
+	width:50%;
 }
 
 .services-items {
 	text-align: center;
-	width: 20%;
+	width:100%;
+	height:auto;
 }
 .services-items .stext {
 
