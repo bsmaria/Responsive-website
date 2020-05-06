@@ -1,5 +1,8 @@
 <?php get_header(); ?>
 
+<h1>single.php</h1>
+
+
 <?php 
 
 while(have_posts()) {

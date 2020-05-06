@@ -4,10 +4,7 @@
 
 <main>
   <section>
-    <h1 class="section-header"><?php the_archive_title(); ?></h1>
-    <a href="<?php echo site_url("/blog")?>" class="return-btn" >
-      <h2> << Return</h2>
-   </a>
+    <h1 class="section-header"><?php the_archive_title(); ?></h1>    
   </section>
   <section class="two-columns-section" id="features-columns">
               

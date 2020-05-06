@@ -6,7 +6,10 @@
   <section>
     <a href="<?php echo site_url("/blog"); ?>">
       <h1 class="section-header">PortFolio</h1>
-    </a>         
+    </a>   
+        <a href="#">
+          <?php echo get_the_category_list(", "); ?>
+        </a>     
   </section>
   <section class="two-columns-section" id="features-columns">
               
