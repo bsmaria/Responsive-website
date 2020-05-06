@@ -4,9 +4,10 @@
 
 <main>
   <section>
-    <a href="<?php echo site_url("/blog"); ?>">
-      <h1 class="section-header">PortFolio</h1>
-    </a>         
+    <h1 class="section-header"><?php the_archive_title(); ?></h1>
+    <a href="<?php echo site_url("/blog")?>" class="return-btn" >
+      <h2> << Return</h2>
+   </a>
   </section>
   <section class="two-columns-section" id="features-columns">
               
