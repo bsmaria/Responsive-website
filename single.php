@@ -11,7 +11,10 @@ while(have_posts()) {
 </section>
     <div class="post-info">
         <div class="metadata">
-         <p>Posted by <?php the_author(); ?> on <?php the_time("F j, y"); ?> in <a href="#"><?php echo get_the_category_list(", "); ?></a></p>
+         <p>Posted by <?php the_author(); ?> on <?php the_time("F j, y"); ?> 
+         <?php if(get_post_type() == 'post'){?>
+         in <a href="#"><?php echo get_the_category_list(", "); ?></a></p>
+         <?php }?>
         </div>
     </div>
 
@@ -34,11 +37,11 @@ while(have_posts()) {
 
                 'author' =>
                    '<input placeholder="Name" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-                  '" size="30"' . $aria_req . ' /></p>',
+                  '" size="30"' . $aria_req . ' />',
               
                 'email' =>                  
                   '<input placeholder="Email" id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
-                  '" size="30"' . $aria_req . ' /></p>'
+                  '" size="30"' . $aria_req . ' />'
                           
               );
             
@@ -81,7 +84,7 @@ while(have_posts()) {
             <?php }?>
 
         <aside id="sidebar">
-        <h3>Side heading</h3>
+        <?php dynamic_sidebar('main_sidebar');?>
         </aside>
         </section>
         
@@ -107,8 +110,10 @@ while(have_posts()) {
         
         ?>    
       <div class="more-features">
-        <!-- <img src="" alt=""> -->
-        <h3><?php the_title(); ?></h3>        
+        <a href="<?php the_permalink(); ?>">
+            <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="<?php the_title();?>">
+          </a>
+            <h3><?php the_title(); ?></h3>        
          <a href="<?php the_permalink(); ?>"><button class="read-more-btn">Read more</button></a>
         
        </div>       

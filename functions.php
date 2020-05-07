@@ -5,7 +5,7 @@
 function gt_setup(){
     wp_enqueue_style("google-fonts", "//fonts.googleapis.com/css?family=Raleway:400,500i,700,900&display=swap");
     wp_enqueue_style("fontawesome", "//use.fontawesome.com/releases/v5.13.0/css/all.css");
-    wp_enqueue_style("style", get_stylesheet_uri(), NULL, microtime());
+    wp_enqueue_style("style", get_stylesheet_uri(), NULL, microtime()); //microtime(); while working on a first version. put number 1.0 when the work is finished
     wp_enqueue_script("main", get_theme_file_uri("/js/main.js"), NULL, microtime(), true);
 }
 
@@ -21,7 +21,6 @@ function mb_init() {
     );
     
 }
-
 
 add_action("after_setup_theme", "mb_init");
 
@@ -48,3 +47,18 @@ function mb_custom_post_type() {
 }
 
 add_action("init", "mb_custom_post_type");
+
+// Sidebar
+
+function mb_widgets() {
+    register_sidebar(
+        array(
+            'name' => 'Main Sidebar',
+            'id' => 'main_sidebar',
+            'before_title' => '<h3>',
+            'after_title' => "</h3>"
+        )
+        );
+}
+
+add_action('widgets_init', 'mb_widgets');
