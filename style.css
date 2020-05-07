@@ -4,7 +4,7 @@ Author: ruz estudio
 Author URI: http://ruzestudio.co
 Description: Official theme for graphic designer Maria Briceño
 Version: 1.0
-Tags: design, portfolio, folio, web, illlustration
+Tags: design, portfolio, folio, web, illustration
 */
 
 html {
@@ -113,14 +113,6 @@ a {
 	margin:10px 0px;
 }
 
-.metadata:before {
-	content:"";
-	display:block;
-	width:100%;
-	height:1px;
-	background-color:black;
-}
-
 .metadata {
 	font-size: 10px;
 	margin: -0.15rem 0rem;
@@ -168,15 +160,6 @@ a {
 	text-transform:uppercase;
 	font-size:40px;
 }
-.section-header:after {
-	content:"";
-	background-color:black;
-	display:block;
-	width:100%;
-	height:1px;
-	margin-top: 2rem;
-}
-
 .pagination {
 	box-sizing: border-box;
 	padding:30px;
@@ -278,11 +261,10 @@ a {
 	margin:30px 10px 10px 10px;
 	font-size:30px;
 	width: 100%;
-	text-align: center;
 }
 .post-description p {
 	margin:5px;
-	padding:30px 30px 0px 30px;
+	padding:30px 10px 0px 10px;
 }
 
 #sidebar {
@@ -303,15 +285,6 @@ a {
 	justify-content: space-around;
 }
 
-.other-posts:before {
-	content:"";
-	display:block;
-	position:absolute;
-	bottom:8rem;
-	width:100%;
-	height:1px;
-	background-color: black;
-}
 
 .more-features {
 	box-sizing: border-box;

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="header1"></div>
+</header>
 <div id="searchbox">
       <input type="text" placeholder="Search here." id="search-input">
     </div>
