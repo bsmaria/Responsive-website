@@ -5,11 +5,13 @@ while(have_posts()) {
 
 ?>
 </header>
-    
+
 <main>
     <section class="section-header">
         <h2><?php the_title(); ?> US</h2>
-        <a href="<?php echo site_url("") ?>"><h4>&#60 &#60 Return</h4></a>
+        <a href="<?php echo site_url("") ?>">
+            <h4>&#60 &#60 Return</h4>
+        </a>
     </section>
 
     <section>
@@ -24,16 +26,18 @@ while(have_posts()) {
             </div>
         </div>
         <aside id="sidebar">
-            <h3>Side heading</h3>
+        <?php dynamic_sidebar('main_sidebar');?>
         </aside>
     </section>
     <?php  }?>
     <section>
-    <div class="division">
-        <a href="#home" class="up-btn"><h4>UP</h4></a>
-    </div>
+        <div class="division">
+            <a href="#home" class="up-btn">
+                <h4>UP</h4>
+            </a>
+        </div>
     </section>
 
 </main>
-    
+
 <?php get_footer(); ?>
