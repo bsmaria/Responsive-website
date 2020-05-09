@@ -57,6 +57,5 @@
 
     <?php if(is_front_page()) {
       ?>
-    <div class="header1">
-      <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>
+    <div class="header1"></div>
     <?php } ?>

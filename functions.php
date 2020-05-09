@@ -5,8 +5,8 @@
 function gt_setup(){
     wp_enqueue_style("google-fonts", "//fonts.googleapis.com/css?family=Raleway:400,500i,700,900&display=swap");
     wp_enqueue_style("fontawesome", "//use.fontawesome.com/releases/v5.13.0/css/all.css");
-    wp_enqueue_style("style", get_stylesheet_uri(), NULL, microtime()); //microtime(); while working on a first version. put number 1.0 when the work is finished
-    wp_enqueue_script("main", get_theme_file_uri("/js/main.js"), NULL, microtime(), true);
+    wp_enqueue_style("style", get_stylesheet_uri()); //NULL, microtime(), ALL; while working on a first version. put number 1.0 when the work is finished
+    wp_enqueue_script("main", get_theme_file_uri("/js/main.js"), NULL, '1.0.0', true); //microtime() changes to 1.0.0 for the first finished version
 }
 
 add_action("wp_enqueue_scripts", "gt_Setup");
