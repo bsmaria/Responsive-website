@@ -6,17 +6,14 @@ Description: Official theme for graphic designer Maria Briceño
 Version: 1.0
 Tags: design, portfolio, folio, web, illustration
 */
-
-html {
-	scroll-behavior: smooth;
-}
-
 :root {
 	--transition-ease: 0.3s ease-in-out;
 	--main-primary-color: #313332;
 	--main-secondary-color: #00C7E8;
 }
-
+html {
+	scroll-behavior: smooth;
+}
 * {
 	margin: 0;
 	padding: 0;
@@ -274,13 +271,13 @@ a {
 	padding: 30px 10px 0px 10px;
 }
 
-		/* SIDEBAR STYLE */
+/* SIDEBAR STYLE */
 
 #sidebar {
 	box-sizing: border-box;
 	width: 30%;
 	margin: 2rem 2rem;
-	background-color:var(--main-primary-color);
+	background-color: var(--main-primary-color);
 	padding: 1rem 2rem;
 	color: white;
 	display: flex;
@@ -288,85 +285,90 @@ a {
 }
 
 #sidebar img {
-	width:100%;
+	width: 100%;
 	height: auto;
 }
 
 #sidebar ul,
 #sidebar ol {
-	list-style:none;
+	list-style: none;
 }
 
 #sidebar li {
-	margin:8px 0;
-	list-style:none;
+	margin: 8px 0;
+	list-style: none;
 }
 
 #sidebar li li {
-	margin: 2px 16px ;
+	margin: 2px 16px;
 }
+
 #sidebar li li li:before {
-	content:"- ";	
+	content: "- ";
 }
 
 #sidebar h3 {
 	text-align: center;
 	text-transform: uppercase;
-	font-size:17px;
+	font-size: 17px;
 	margin-bottom: 15px;
 }
+
 #sidebar h3:before {
-	content:"";
-	display:block;
-	width:100%;
-	height:1px;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 1px;
 	background-color: white;
-	margin-bottom:15px;
+	margin-bottom: 15px;
 }
 
 #sidebar h3:after {
-	content:"";
-	display:block;
-	width:100%;
-	height:1px;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 1px;
 	background-color: white;
-	margin-top:15px;
+	margin-top: 15px;
 }
 
 #sidebar a {
-	color:white;
-	font-size:12px;
+	color: white;
+	font-size: 12px;
 	transition: var(--transition-ease);
 }
 
 #sidebar a:hover {
-	color:var(--main-secondary-color);
+	color: var(--main-secondary-color);
 }
 
 #sidebar input {
-	width:100%;
+	width: 100%;
 }
+
 #sidebar form {
-	position:relative;
+	position: relative;
 }
+
 #sidebar #search-btn {
-	background:var(--main-primary-color) url("img/search.png");
-	background-size:contain;
+	background: var(--main-primary-color) url("img/search.png");
+	background-size: contain;
 	background-position: center;
-	background-repeat:no-repeat;
-	width:48px;
-	height:100%;
-	position:absolute;
-	right:0; top:0;
-	cursor:pointer;
-	transition:var(--transition-ease);
+	background-repeat: no-repeat;
+	width: 48px;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	cursor: pointer;
+	transition: var(--transition-ease);
 }
 
 #sidebar #search-btn:hover {
-	background:var(--main-secondary-color) url("img/search1.png");
-	background-size:contain;
+	background: var(--main-secondary-color) url("img/search1.png");
+	background-size: contain;
 	background-position: center;
-	background-repeat:no-repeat;
+	background-repeat: no-repeat;
 }
 
 .other-posts {
@@ -435,8 +437,8 @@ a {
 
 .no-results {
 
-	height:48vh;
-	display:flex;
+	height: 48vh;
+	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: stretch;
@@ -444,7 +446,7 @@ a {
 
 .no-results h2,
 .no-results h3 {
-	margin:10px 0px;
+	margin: 10px 0px;
 }
 
 .no-results ul {
@@ -452,66 +454,69 @@ a {
 	margin: 30px auto;
 }
 
-.no-results li {	
-	display:inline-block;	
-	background-color: white;	
+.no-results li {
+	display: inline-block;
+	background-color: white;
 }
 
 .no-results a {
-	display:block;
+	display: block;
 	box-sizing: border-box;
-	color:var(--main-primary-color);
-	text-transform:uppercase;
-	padding:10px;
-	margin:0px 10px;
+	color: var(--main-primary-color);
+	text-transform: uppercase;
+	padding: 10px;
+	margin: 0px 10px;
 	align-self: center;
 	background-color: white;
-	transition:var(--transition-ease);
+	transition: var(--transition-ease);
 }
+
 .no-results a:hover {
 
-	color:var(--main-secondary-color);
+	color: var(--main-secondary-color);
 }
+
 /* ERROR 404 PAGE */
 
 .container-404 {
-	display:flex;
+	display: flex;
 	flex-direction: column;
-	width:100%;
-	height:100vh;
-	padding:10rem 20rem;
-	box-sizing:border-box;
+	width: 100%;
+	height: 100vh;
+	padding: 10rem 20rem;
+	box-sizing: border-box;
 }
 
 .container-404 img {
 	margin: 0px;
-	width:100%;
-	height:auto;
+	width: 100%;
+	height: auto;
 }
 
 .container-404 ul {
 	list-style-type: none;
-	margin-top:1rem;
+	margin-top: 1rem;
 }
 
 .container-404 li {
-	display:inline-block;
+	display: inline-block;
 }
 
 .container-404 li a {
-	display:block;
+	display: block;
 	box-sizing: border-box;
-	color:var(--main-primary-color);
-	text-transform:uppercase;
-	padding:10px;
-	margin:0px 10px;
+	color: var(--main-primary-color);
+	text-transform: uppercase;
+	padding: 10px;
+	margin: 0px 10px;
 	align-self: center;
 	background-color: white;
-	transition:var(--transition-ease);
+	transition: var(--transition-ease);
 }
+
 .container-404 li a:hover {
 
-	color:var(--main-secondary-color);
+	color: var(--main-secondary-color);
 }
 
 /* SLIDEOUT MENU */
@@ -547,22 +552,24 @@ header #slideout-menu li {
 }
 
 .searchbox-slide-menu #search-btn {
-	background:var(--main-primary-color) url("img/search.png");
-	background-size:contain;
+	background: var(--main-primary-color) url("img/search.png");
+	background-size: contain;
 	background-position: center;
-	background-repeat:no-repeat;
-	width:48px;
-	height:30px;
-	position:absolute;
-	right:0; bottom:0.6rem;
-	cursor:pointer;
-	transition:var(--transition-ease);
+	background-repeat: no-repeat;
+	width: 48px;
+	height: 30px;
+	position: absolute;
+	right: 0;
+	bottom: 0.6rem;
+	cursor: pointer;
+	transition: var(--transition-ease);
 }
+
 .searchbox-slide-menu #search-btn:hover {
-	background:var(--main-secondary-color) url("img/search1.png");
-	background-size:contain;
+	background: var(--main-secondary-color) url("img/search1.png");
+	background-size: contain;
 	background-position: center;
-	background-repeat:no-repeat;
+	background-repeat: no-repeat;
 }
 
 .searchbox-slide-menu input {
@@ -699,22 +706,24 @@ header #home-nav {
 }
 
 #searchbox #search-btn {
-	background:var(--main-primary-color) url("img/search.png");
-	background-size:contain;
+	background: var(--main-primary-color) url("img/search.png");
+	background-size: contain;
 	background-position: center;
-	background-repeat:no-repeat;
-	width:48px;
-	height:100%;
-	position:absolute;
-	right:0; top:0;
-	cursor:pointer;
-	transition:var(--transition-ease);
+	background-repeat: no-repeat;
+	width: 48px;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	cursor: pointer;
+	transition: var(--transition-ease);
 }
+
 #searchbox #search-btn:hover {
-	background:var(--main-secondary-color) url("img/search1.png");
-	background-size:contain;
+	background: var(--main-secondary-color) url("img/search1.png");
+	background-size: contain;
 	background-position: center;
-	background-repeat:no-repeat;
+	background-repeat: no-repeat;
 }
 
 #searchbox input {
@@ -1005,7 +1014,7 @@ main {
 	width: 100%;
 	display: flex;
 	flex-direction: row;
-	justify-content:space-between;
+	justify-content: space-between;
 	align-items: center;
 }
 
@@ -1242,7 +1251,7 @@ main {
 /*Comment section when logged*/
 
 #comment-section {
-	width:100%;
+	width: 100%;
 }
 
 /* INFO DE CONTACTO */

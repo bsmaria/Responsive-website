@@ -1,11 +1,6 @@
-logo-v1-blanco.png
-page-icon-02.png
-page-icon-03.png
-page-icon-04.png
+*.png
 .DS_store
-screenshot.png
 *.text
 *.temp
-search.png
-search1.png
 *.zip
+*.gitignore
