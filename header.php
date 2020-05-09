@@ -20,7 +20,9 @@
         <li class="menu-item"><a href="#services"> Services </a></li>
         <li class="menu-item"><a href="#contact"> Contact </a></li>
         <li class="menu-item">
-          <input type="text" placeholder="search here">
+          <div class="searchbox-slide-menu">
+            <?php get_search_form(); ?>
+          </div>
         </li>
       </ul>
     </div>
@@ -49,7 +51,12 @@
       </ul>
     </nav>
 
+    <div id="searchbox">
+  <?php get_search_form(); ?>
+    </div>
+
     <?php if(is_front_page()) {
       ?>
-    <div class="header1"></div>
+    <div class="header1">
+      <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>
     <?php } ?>

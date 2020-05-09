@@ -26,7 +26,7 @@ while(have_posts()) {
             </div>
         </div>
         <aside id="sidebar">
-        <?php dynamic_sidebar('main_sidebar');?>
+        <?php dynamic_sidebar('about_sidebar');?>
         </aside>
     </section>
     <?php  }?>

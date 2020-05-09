@@ -1,8 +1,6 @@
 <?php get_header(); ?>
 </header>
-<div id="searchbox">
-  <input type="text" placeholder="Search here." id="search-input">
-</div>
+
 <div class="h1-title">
   <div class="title-text" id="home-title-text">
     <span>Here you can type your company slogan</span>
@@ -94,10 +92,6 @@
 
   <section>
     <div id="services">
-      <div class="services-text">
-        <span><a href="<?php echo site_url('/services'); ?>">Our services</a></span>
-      </div>
-      <div class="flex-box">
         <div class="services-items">
           <div class="circle-image"><i class="fas fa-image"></i></div>
           <span class="stext">Branding</span>
@@ -115,25 +109,15 @@
           <span class="stext">Illustration</span>
         </div>
       </div>
-    </div>
   </section>
 
   <section id="contact">
     <div class="contact-form">
       <div class="comment-text">
-        <h2>Leave us comment!</h2>
+        <h2>Leave us a comment!</h2>
       </div>
       <div id="myform">
-        <form action="submit">
-          <label for="name">Name:</label><br>
-          <input type="text" placeholder="Ex: John" name="name" value="" required></br>
-          <label for="emnail">Email</label><br>
-          <input type="email" placeholder="Ex: xxxxx@mail.com" value="@" name="email" required><br>
-          <label for="textarea">Your message here:</label><br>
-          <textarea type="text" placeholder="Write your message." minlength="20" maxlength="340"
-            name="textarea"></textarea><br>
-          <button type="submit" id="submit-btn" name="submit" value="submit">SUBMIT</button>
-        </form>
+                  <?php the_content();?>
       </div>
     </div>
   </section>

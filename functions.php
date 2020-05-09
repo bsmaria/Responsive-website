@@ -48,7 +48,7 @@ function mb_custom_post_type() {
 
 add_action("init", "mb_custom_post_type");
 
-// Sidebar
+// Sidebar General
 
 function mb_widgets() {
     register_sidebar(
@@ -62,3 +62,27 @@ function mb_widgets() {
 }
 
 add_action('widgets_init', 'mb_widgets');
+
+// Sidebar about (index.php)
+
+function mb_about_widgets() {
+    register_sidebar(
+        array(
+            'name' => 'About Sidebar',
+            'id' => 'about_sidebar',
+            'before_title' => '<h3>',
+            'after_title' => "</h3>"
+        )
+        );
+}
+
+add_action('widgets_init', 'mb_about_widgets');
+
+//filters for search
+
+function search_filter($query) {
+    if($query->is_search()) {
+        $query->set('post_type', array('post', 'project'));
+    }
+}
+add_filter( 'pre_get_posts', 'search_filter');
